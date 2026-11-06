@@ -1,0 +1,42 @@
+=============================================================================
+SIFSM - Guia de Montagem no Tinkercad Circuits (Circuito Lógico)
+=============================================================================
+
+Nota sobre a entrega (Seção 6.2 do PDF):
+O PDF exige "circuito_logico.pdf, circuito_logico.png OU link_tinkercad.txt".
+O diagrama completo com tabela-verdade já está entregue em 'circuito_logico.png'
+(e o firmware Arduino opcional em 'circuito_arduino.ino').
+
+Caso o grupo monte também a simulação interativa no Tinkercad, basta colar o
+link público compartilhado na primeira linha deste arquivo!
+
+-----------------------------------------------------------------------------
+OPÇÃO A — CIRCUITO DIGITAL SIMPLES (2 ENTRADAS + PORTA AND + LED) [2 MINUTOS]
+-----------------------------------------------------------------------------
+Regra booleana:  ALERTA = Consumo_Alto AND Modulo_Critico   (S = A · B)
+
+Componentes no Tinkercad (Criar -> Circuito):
+  1. Fonte de alimentação 5V (ou 1 Arduino UNO usando apenas os pinos 5V e GND);
+  2. Placa de ensaio pequena (Protoboard);
+  3. 1 CI 74HC08 (Porta AND quádrupla);
+  4. 2 Chaves deslizantes (ou DIP Switch) para as entradas A e B;
+  5. 1 Resistor de 220 Ohm + 1 LED Vermelho (saída de alerta).
+
+Ligações no CI 74HC08:
+  - Pino 14 (VCC) -> barramento +5V | Pino 7 (GND) -> barramento GND;
+  - Pino 1 (Entrada 1A) -> Chave A (Consumo Alto: 5V = 1, GND = 0);
+  - Pino 2 (Entrada 1B) -> Chave B (Módulo Crítico: 5V = 1, GND = 0);
+  - Pino 3 (Saída 1Y)   -> Resistor 220 Ohm -> Ânodo do LED Vermelho -> GND.
+
+Teste na simulação:
+  - A=0, B=0 -> LED apagado (0)
+  - A=0, B=1 -> LED apagado (0)
+  - A=1, B=0 -> LED apagado (0)
+  - A=1, B=1 -> LED ACESO   (1) -> Alerta acionado!
+
+-----------------------------------------------------------------------------
+OPÇÃO B — AUTOMAÇÃO EMBARCADA COM ARDUINO UNO (OPCIONAL)
+-----------------------------------------------------------------------------
+Para simular com potenciômetros, chaves, LEDs e buzzer, conecte os pinos A0,
+A1, D3, D4, D5, D8, D9, D10 e D11 conforme descrito nos comentários do arquivo
+'circuito_arduino.ino' e cole o código na aba "Código -> Texto" do Tinkercad.

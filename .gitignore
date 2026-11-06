@@ -1,0 +1,11 @@
+# Cache do Python
+__pycache__/
+*.py[cod]
+
+# Banco SQLite gerado automaticamente na 1ª execução a partir de script_banco.sql
+aurora_siger.db
+*.db-journal
+
+# Ambientes virtuais
+.venv/
+venv/
