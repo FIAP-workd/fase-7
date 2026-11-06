@@ -5,6 +5,7 @@ Protótipo integrador desenvolvido para a **Fase 7 de Ciência da Computação (
 ## Integrantes do Grupo
 
 | Nome | RM |
+|---|---|
 | João Victor Viana Feitosa | 573217 |
 | Luis Gustavo Ribeiro Andrade | 569147 |
 | Matheus de Carvalho Teodoro | 572855 |
